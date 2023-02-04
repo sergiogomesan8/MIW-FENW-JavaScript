@@ -1,0 +1,216 @@
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale="1" />
+    <title>Práctica Uno</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/css/practica_uno.css" media="screen"/>
+    <script type="text/javascript" src="/js/practica_uno.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- FA icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar-module" id="navbar-module">
+      <div class="navbar-brand" href="#">
+        <a class="container-logo" href="#">
+          <img class="logo" src="/assets/iconos/ic_miw_launcher_rounded.png" alt="ic_miw_launcher_rounded.png" />
+        </a>
+        <button class="navbar-toggler d-block d-md-none" type="button" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="dropdown-menu anchor-type" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item anchor-type" id="acces-home2">Home</a>
+          <a class="dropdown-item anchor-type" id="acces-preferences2">Preferences</a>
+          <a class="dropdown-item anchor-type" id="acces-game2">Game</a>
+          <a class="dropdown-item anchor-type" id="acces-records2">Records</a>
+        </div>
+      </div>
+
+      <div class="container-options d-none d-md-flex">
+        <ul class="options navbar-nav mr-auto">
+          <li class="option nav-item">
+            <a class="anchor-type" id="acces-home">Home</a>
+          </li>
+          <li class="option nav-item">
+            <a class="anchor-type" id="acces-preferences">Preferences</a>
+          </li>
+          <li class="option nav-item">
+            <a class="anchor-type" id="acces-game">Game</a>
+          </li>
+          <li class="option nav-item">
+            <a class="anchor-type" id="acces-records">Records</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="user-options">
+        <a class="container-login anchor-type" id="acces-login">Iniciar Sesión</a>
+        <p class="o">o</p>
+        <a class="container-signin">
+          <button class="button-type" type="button" id="acces-signin">Registrarse</button>
+        </a>
+      </div>
+    </nav>
+    <!-- ------------------------- -->
+
+    
+    <!-- HOME -->
+    <div class="home col-12" id="mod-home">
+      <div class="img-mobile">
+      </div>
+      <div class="container-header">
+          <div class="container-titulo">
+              <h2 class="title">Juego de Naipes</h2>
+          </div>
+          <div class="container-texto">
+              <p class="text">Solitario para la asignatura <b>FENW</b> del Máster en Ingeniería Web de la Universidad
+                Politécnica de Madrid. <br>El objetivo del juego es conseguir detectar y señalar las “parejas” de imágenes iguales entre un
+                conjunto de imágenes que aparecerán dadas la vuelta y que se mostrarán de dos en dos al jugador
+                según vaya pinchando en ellas con el ratón. Aquellas parejas que se acierten puntuarán
+                positivamente mientras que aquellas que no se correspondan se volverán a dar la vuelta.
+              </p>
+          </div>
+      </div>
+
+      <div class="logo-upm">
+        <img src="/assets/img/logo-upm.png" alt="logo">
+      </div>
+    </div>
+    <!-- ------------------------- -->
+
+
+    <!-- PREFERENCES -->
+    <div class="preferences d-none" id="mod-preferences">
+      <div class="background-color col-10 col-lg-8">
+        <div class="election col-12">
+          <p class="type-data">Elija el número de cartas con las que desea jugar...</p>
+          <input class="type-input" id="num-naipes" name="num-naipes" placeholder="Número de Naipes" type="number" step="6" min="20" max="32">
+        </div>
+        <div class="election col-12">
+          <p class="type-data">Elija el tiempo máximo con el que desea jugar...</p>
+          <input class="type-input" id="time-game" name="time-game" placeholder="Tiempo de juego" type="number" step="30" min="0" max="150">
+        </div>
+        <div class="submit-prefs">
+          <button class="boton button-type" id="prefs-submit" type="button">Aceptar</button>
+      </div>
+      </div>
+    </div>
+    <!-- ------------------------- -->
+
+
+    <!-- GAME -->
+    <div class="game d-none" id="mod-game">
+      <div class="tableboard col-10">
+        <div class="container">
+          <h3 class="titleScore">Score</h3>
+          <p class="score" id="score"></p>
+        </div>
+        <hr class="hr" />
+        <div class="container">
+          <h3 class="titleTime">Time</h3>
+          <p class="time" id="time"></p>
+        </div>
+        <hr class="hr" />
+        <div class="container">
+          <h3 class="titleNumNaipes">Naipes</h3>
+          <p class="NumNaipes" id="num-naipes-info"></p>
+        </div>
+        <div></div>
+      </div>
+
+      <div class="template-naipes col-12 col-sm-10 row" id="template-naipes">
+        <!--a class="naipe col-2" >
+          <img src="/assets/img/reverso.jpg" alt="reverso.jpg" id="naipe1">
+        </a-->
+      </div>
+    </div>    
+    <!-- ------------------------- -->
+
+
+    <!-- RECORDS -->
+    <div class="records d-none" id="mod-records">
+      <div class="background-color col-10 col-lg-8">
+        <table class="table">
+          <thead>
+              <tr class="type-columns">
+                  <th></th>
+                  <th scope="col" class="sticky">Nº</th>
+                  <th scope="col" class="sticky">User</th>
+                  <th scope="col" class="sticky">Score</th>
+                  <th scope="col" class="sticky">Cards</th>
+                  <th scope="col" class="sticky">Time</th>
+                  <th scope="col" class="sticky">Date</th>
+              </tr>
+          </thead>
+          <tbody id="body">
+          </tbody>
+        </table>
+      </div>
+    </div>    
+    <!-- ------------------------- -->
+
+
+    <!-- LOG IN-->
+    <div class="form-login d-none" id="mod-login">
+      <div class="logo-upm">
+        <img src="/assets/img/logo-upm.png" alt="logo">
+      </div>
+      <form>
+        <div class="user">
+          <p class="type-data">Usuario</p>
+          <input class="type-input" id="user" name="user" placeholder="Usuario" type="text">
+        </div>
+        <div class="password">
+            <p class="type-data">Contraseña</p>
+            <input class="type-input" id="password" name="password" placeholder="Contraseña" type="password">
+        </div>
+        <div class="submit-login">
+            <button class="boton button-type" id="submit-login" type="button">Iniciar Sesión</button>
+        </div>
+      </form>
+    </div>    
+    <!-- ------------------------- -->
+
+
+    <!-- SIGN IN -->
+    <div class="form-signin d-none" id="mod-signin">
+      <div class="logo-upm">
+        <img src="/assets/img/logo-upm.png" alt="logo">
+      </div>
+      <form>
+        <div class="user">
+          <p class="type-data">Usuario</p>
+          <input class="type-input" id="userS" name="user" placeholder="Usuario" type="text">
+        </div>
+        <div class="email">
+          <p class="type-data">E-mail</p>
+          <input class="type-input" id="email" name="email" placeholder="E-mail" type="email">
+        </div>
+        <div class="password">
+            <p class="type-data">Contraseña</p>
+            <input class="type-input" id="passwordS" name="password" placeholder="Contraseña" type="password">
+        </div>
+        <div class="password">
+          <p class="type-data">Contraseña</p>
+          <input class="type-input" id="password-repeat" name="password" placeholder="Contraseña" type="password">
+      </div>
+        <div class="submit-signin">
+            <button class="boton button-type" id="submit-signin" type="button">Registrarse</button>
+        </div>
+      </form>
+    </div>    
+    <!-- ------------------------- -->
+
+  </body>
+</html>

@@ -1,0 +1,348 @@
+#navbar-module {
+    display: flex;
+    align-items: center;
+
+    height: 60px;
+
+    background-color: #030a01;
+    color: white;
+}
+
+#navbar-module .navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+
+#navbar-module .navbar-brand .logo {
+    width: 40px;
+    height: 40px;
+}
+
+#navbar-module .navbar-brand .navbar-toggler{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40px;
+}
+
+#navbar-module .navbar-brand .navbar-toggler .navbar-toggler-icon{
+    background-image: url(/assets/iconos/tooglerOptions.svg);
+    color: white;
+}
+
+#navbar-module .options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    font-family: Calibri;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+#navbar-module .option{
+    margin-right: 16px;
+}
+
+#navbar-module .option a{
+    color: white;
+}
+
+#navbar-module .user-options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: 16px;
+
+    gap: 8px;
+    font-size: 16px;
+    
+    font-family: Calibri;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+#navbar-module .user-options p{
+    margin-bottom: 0px;
+}
+/*--- Modulo Navbar ---*/
+
+
+
+/*--- Modulo Home ---*/
+#mod-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+
+#mod-home .img-mobile{
+    width: 100%;
+    height: 200px;
+    background-image: url("/assets/img/background-image-home.jpg");
+    background-size: cover !important;
+    background-position: center;
+}
+
+#mod-home .container-header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    margin: 32px 48px 0px;
+}
+
+#mod-home .container-header .title{
+    font-family: Calibri;
+    font-size: 3rem;    
+}
+
+#mod-home .container-header .text{
+    margin-top:24px;
+    font-family: Calibri;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+#mod-home .img-mobile img{
+    justify-content: center;
+    height: 220px;
+    width: 100%;
+}
+/*--- Modulo Home ---*/
+
+
+
+/*--- Modulo Preferences ---*/
+#mod-preferences{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mod-preferences .background-color{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 32px;
+    margin-top:64px;
+    margin-bottom: 64px;
+
+    width: 600px;
+    height: 200px;
+
+    gap:16px;
+
+    background-color: rgb(240, 238, 238);
+
+    border-radius: 8px;
+}
+
+#mod-preferences .election{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#mod-preferences .election .type-data{
+    width: 200px;
+    margin-bottom: 0px;
+}
+
+#mod-preferences .election input{
+    margin-bottom: 0px;
+}
+/*--- Modulo Preferences ---*/
+
+
+
+/*-- Modulo Game --*/
+#mod-game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mod-game .tableboard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    margin-top: 10px;
+    padding: 8px;
+
+    height: 60px;
+    width: 600px;
+
+    background-color: rgb(253, 135, 0);
+    border-radius: 8px;
+}
+
+#mod-game .tableboard .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-width: 2px;
+    border-bottom: 2px;
+
+    gap:8px
+}
+
+#mod-game .tableboard .container h3{
+    font-family: Calibri;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#mod-game .tableboard .container p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 30px;
+
+    background-color: rgb(230, 230, 230);
+    border-radius: 8px;
+}
+
+#mod-game .tableboard .container p{
+    font-family: Calibri;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color:rgb(253, 135, 0);
+}
+
+#mod-game .tableboard .hr{
+    width: 1px;
+    height: 60px;
+    background-color: white;
+    border: none;
+    margin: 0px;
+}
+
+#mod-game .template-naipes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+    padding: 16px;
+
+    width: 800px;
+    height: 400px;
+
+    background-color: green;
+    border-radius: 4px;
+}
+
+#mod-game .template-naipes .naipe{
+    display: flex;
+    justify-content: center;
+
+    margin: 8px;
+    padding: 0px;
+}
+
+#mod-game .template-naipes .naipe img{
+    max-width: 90px;
+    max-height: 125px;
+    cursor: pointer;
+}
+
+#mod-game .button{
+    margin: 32px auto;
+    border-radius: 80px;
+    border-color: rgb(235, 136, 6);
+    height: 40px;
+    width: 40px;
+}
+
+#mod-game .button:hover{
+    background-color: rgb(235, 136, 6);;
+}
+/*-- Module Game --*/
+
+
+/*-- Module Records --*/
+#mod-records {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+#mod-records .background-color{
+    padding: 32px;
+    margin-top:64px;
+    margin-bottom: 64px;
+
+    max-width: 600px;
+    height: auto;
+
+    background-color: rgb(240, 238, 238);
+}
+
+#mod-records .table{
+    margin-bottom: 0px;
+
+    scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+    scrollbar-width: thin;
+
+    border-radius: 8px;
+}
+
+#mod-records .table tbody{
+    background-color: rgb(240, 238, 238);
+}
+
+#mod-records .table tbody tr:nth-child(2n){
+    background-color: rgb(224, 224, 224);
+}
+
+#mod-records .table .record{
+    height: 50px;
+    font-family: Calibri;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+/*-- Module Records --*/
+
+
+/*-- Modulo Log in & Sign in --*/
+#mod-login, #mod-signin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mod-login form, #mod-signin form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+#mod-login form .type-data, #mod-signin form .type-data{
+    font-family: Calibri;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 4px;
+}
+/*-- Modulo Log in & Sign in --*/
